@@ -81,8 +81,7 @@ public class SpecExample
     public string Section { get; set; } = "";
 }
 
-// NOTE: This extension and renderer are hand-written and must be preserved on regeneration.
-// They fix a Markdig rendering difference from the CommonMark spec: Markdig omits the \n
+// Fixes a Markdig rendering difference from the CommonMark spec: Markdig omits the \n
 // after <li> when the list item contains block-level content (e.g. <p>, <hr />, <h1>-<h6>).
 internal sealed class CommonMarkListExtension : IMarkdownExtension
 {
